@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CodeOfAI.Application/CodeOfAI.Application.csproj" />
+  <Project Path="CodeOfAI.Core/CodeOfAI.Core.csproj" />
+  <Project Path="CodeOfAI.Web.Core/CodeOfAI.Web.Core.csproj" />
+  <Project Path="CodeOfAI.Web.Entry/CodeOfAI.Web.Entry.csproj" />
+</Solution>
