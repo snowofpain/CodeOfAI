@@ -16,7 +16,7 @@ namespace CodeOfAI.Application.Modules.LargeLanguageModels.Services
         private readonly string _modelName;
         private readonly string _baseUrl;
         private readonly HttpClient _httpClient;
-        private readonly string _apiKey;
+        private string _apiKey;
 
         public DeepseekModelChatService(
             ILogger<DeepseekModelChatService> logger,
@@ -39,6 +39,8 @@ namespace CodeOfAI.Application.Modules.LargeLanguageModels.Services
             Action<ChatResponse> onChunkReceived = null, 
             CancellationToken cancellationToken = default)
         {
+            _apiKey = request.ApiKey;
+
             using var httpRequest = CreateHttpRequest(request.Message);
             using var response = await SendRequestAsync(httpRequest, cancellationToken);
             await ProcessResponseStreamAsync(response, onChunkReceived, cancellationToken);
@@ -78,7 +80,8 @@ namespace CodeOfAI.Application.Modules.LargeLanguageModels.Services
             {
                 Content = new StringContent(jsonContent, Encoding.UTF8, CommonDef.ContentType)
             };
-            httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey);
+            //httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey); //这里是请求信息
+            httpRequest.Headers.Authorization = new AuthenticationHeaderValue("Bearer", _apiKey); //这里是请求信息
             return httpRequest;
         }
 
