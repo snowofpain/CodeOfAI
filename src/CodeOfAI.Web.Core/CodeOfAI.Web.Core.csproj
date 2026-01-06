@@ -5,6 +5,8 @@
 		<TargetFramework>net10.0</TargetFramework>
 		<NoWarn>1701;1702;1591</NoWarn>
 		<DocumentationFile>CodeOfAI.Web.Core.xml</DocumentationFile>
+		<BaseOutputPath>G:\CShapCode\CodeOfAI\CodeOfAI\src\build</BaseOutputPath>
+		<Platforms>AnyCPU;x64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>

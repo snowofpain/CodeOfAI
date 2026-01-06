@@ -1,6 +1,19 @@
 <Solution>
-  <Project Path="CodeOfAI.Application/CodeOfAI.Application.csproj" />
-  <Project Path="CodeOfAI.Core/CodeOfAI.Core.csproj" />
-  <Project Path="CodeOfAI.Web.Core/CodeOfAI.Web.Core.csproj" />
-  <Project Path="CodeOfAI.Web.Entry/CodeOfAI.Web.Entry.csproj" />
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/UnitTest/" />
+  <Project Path="CodeOfAI.Application/CodeOfAI.Application.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="CodeOfAI.Core/CodeOfAI.Core.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="CodeOfAI.Web.Core/CodeOfAI.Web.Core.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="CodeOfAI.Web.Entry/CodeOfAI.Web.Entry.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>

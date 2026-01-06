@@ -4,12 +4,12 @@
         <name>CodeOfAI.Core</name>
     </assembly>
     <members>
-        <member name="T:CodeOfAI.Core.DbContext">
+        <member name="T:CodeOfAI.Core.Database.DbContext">
             <summary>
             数据库上下文对象
             </summary>
         </member>
-        <member name="F:CodeOfAI.Core.DbContext.Instance">
+        <member name="F:CodeOfAI.Core.Database.DbContext.Instance">
             <summary>
             SqlSugar 数据库实例
             </summary>

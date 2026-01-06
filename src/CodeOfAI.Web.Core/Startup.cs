@@ -15,6 +15,8 @@ namespace CodeOfAI.Web.Core
 
             services.AddCorsAccessor();
 
+            services.AddHttpClient();
+
             services.AddControllers()
                     .AddInjectWithUnifyResult();
         }

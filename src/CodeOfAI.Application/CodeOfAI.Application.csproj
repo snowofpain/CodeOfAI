@@ -6,6 +6,8 @@
 		<NoWarn>1701;1702;1591</NoWarn>
 		<DocumentationFile>CodeOfAI.Application.xml</DocumentationFile>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<BaseOutputPath>G:\CShapCode\CodeOfAI\CodeOfAI\src\build</BaseOutputPath>
+		<Platforms>AnyCPU;x64</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,10 +23,6 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\CodeOfAI.Core\CodeOfAI.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="System\Services\" />
 	</ItemGroup>
 
 </Project>

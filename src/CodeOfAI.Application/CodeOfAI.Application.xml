@@ -4,16 +4,49 @@
         <name>CodeOfAI.Application</name>
     </assembly>
     <members>
-        <member name="T:CodeOfAI.Application.SystemAppService">
+        <member name="P:CodeOfAI.Application.Modules.LargeLanguageModels.Dtos.ChatRequest.Message">
             <summary>
-            系统服务接口
+            用户输入的消息
             </summary>
         </member>
-        <member name="M:CodeOfAI.Application.SystemAppService.GetDescription">
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.ModelChatController.StreamChat(CodeOfAI.Application.Modules.LargeLanguageModels.Dtos.ChatRequest)">
             <summary>
-            获取系统描述
+            调用SSE流式对话
             </summary>
-            <returns></returns>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.ModelChatController.WriteSseEventAsync(System.Object,System.Threading.CancellationToken)">
+            <summary>
+            SSE数据传输
+            </summary>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.Services.DeepseekModelChatService.CreateHttpRequest(System.String)">
+            <summary>
+            创建请求信息
+            </summary>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.Services.DeepseekModelChatService.CreateHttpRequestV0(CodeOfAI.Core.StandardOptions.ChatMessages)">
+            <summary>
+            创建请求信息
+            </summary>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.Services.DeepseekModelChatService.SendRequestAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            发送请求
+            </summary>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.Services.DeepseekModelChatService.ProcessResponseStreamAsync(System.Net.Http.HttpResponseMessage,System.Action{CodeOfAI.Core.StandardOptions.ChatResponse},System.Threading.CancellationToken)">
+            <summary>
+            处理大模型返回的流式请求
+            </summary>
+        </member>
+        <member name="M:CodeOfAI.Application.Modules.LargeLanguageModels.Services.IModelChatService.SendMessageStreamAsync(CodeOfAI.Application.Modules.LargeLanguageModels.Dtos.ChatRequest,System.Action{CodeOfAI.Core.StandardOptions.ChatResponse},System.Threading.CancellationToken)">
+            <summary>
+            发送消息并接收流式响应
+            </summary>
+            <param name="request">对话请求</param>
+            <param name="onChunkReceived">接收到数据块时的回调</param>
+            <param name="cancellationToken">取消令牌</param>
+            <returns>任务</returns>
         </member>
     </members>
 </doc>
